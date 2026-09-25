@@ -60,7 +60,7 @@ export default function Navbar() {
           <a href="/Ali_Shan_CV.pdf" className="btn btn-outline" download>Download CV</a>
         </div>
 
-        <button className="hamburger" aria-label="Menu" onClick={() => setMenuOpen(o => !o)}>
+        <button className={`hamburger${menuOpen ? ' active' : ''}`} aria-label="Menu" onClick={() => setMenuOpen(o => !o)}>
           <span /><span /><span />
         </button>
       </div>
