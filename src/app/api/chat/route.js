@@ -21,17 +21,20 @@ export async function POST(request) {
     if (!message) return NextResponse.json({ ok: false, error: 'No message provided.' }, { status: 400 });
 
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: process.env.GEMINI_MODEL || 'gemini-2.5-flash' });
+    const model = genAI.getGenerativeModel({ 
+      model: process.env.GEMINI_MODEL || 'gemini-2.5-flash',
+      systemInstruction: SYSTEM_CONTEXT
+    });
+
+    // Remove the initial hardcoded 'model' greeting from the history to prevent role collision.
+    // Gemini strictly requires alternating user/model roles.
+    const cleanHistory = history.filter((m, i) => !(i === 0 && m.role === 'model'));
 
     const chat = model.startChat({
-      history: [
-        { role: 'user', parts: [{ text: SYSTEM_CONTEXT }] },
-        { role: 'model', parts: [{ text: "Understood! I'm Ali Shan's portfolio assistant. I'll help visitors learn about his skills, projects, and experience. How can I help?" }] },
-        ...history.map(m => ({
-          role: m.role,
-          parts: [{ text: m.text }],
-        })),
-      ],
+      history: cleanHistory.map(m => ({
+        role: m.role,
+        parts: [{ text: m.text }],
+      })),
     });
 
     const result = await chat.sendMessage(message);
