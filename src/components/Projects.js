@@ -55,8 +55,8 @@ export default function Projects({ repos = [] }) {
           {visible.map(proj => (
             <div key={proj.repoName} className={`project-card${proj.featured ? ' featured' : ''}`}>
               <div className="proj-img-wrap">
-                <Image src={proj.image} alt={proj.title} fill
-                  className="proj-img" style={{ objectFit:'cover' }} sizes="(max-width:768px) 100vw, 33vw" />
+                <Image src={proj.image} alt={proj.title} fill quality={65} loading="lazy"
+                  className="proj-img" style={{ objectFit:'cover' }} sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw" />
                 <div className="proj-overlay">
                   <a href={proj.url} target="_blank" rel="noopener noreferrer" className="overlay-btn">
                     View on GitHub
