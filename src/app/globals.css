@@ -103,7 +103,7 @@ h1,h2,h3,h4,h5,h6{line-height:1.2;font-weight:700}
 .badge-dot{width:8px;height:8px;background:#4ade80;border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 .hero-title{font-size:4rem;font-weight:900;line-height:1.1;margin-bottom:20px}
-.hero-typewriter{font-size:1.6rem;font-weight:600;min-height:2.2rem;margin-bottom:20px;color:var(--accent-light);font-family:var(--mono)}
+.hero-typewriter{display:flex;align-items:flex-start;font-size:1.6rem;font-weight:600;min-height:4rem;margin-bottom:20px;color:var(--accent-light);font-family:var(--mono)}
 .cursor{animation:blink 1s step-end infinite;color:var(--accent)}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 .hero-desc{font-size:1.1rem;color:var(--text-muted);max-width:520px;line-height:1.75;margin-bottom:32px}
