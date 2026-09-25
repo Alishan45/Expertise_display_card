@@ -1,0 +1,12 @@
+# Next.js
+.next/
+out/
+node_modules/
+
+# Env – NEVER commit secrets
+.env.local
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
