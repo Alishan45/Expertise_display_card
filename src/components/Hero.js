@@ -61,6 +61,22 @@ export default function Hero() {
     return () => { window.removeEventListener('resize', resize); cancelAnimationFrame(raf); };
   }, []);
 
+  const Avatar = ({ className }) => (
+    <div className={`hero-avatar ${className}`}>
+      <div className="av-ring av-ring1" />
+      <div className="av-ring av-ring2" />
+      <div className="av-ring av-ring3" />
+      <Image src="/images/profile/ali-shan-ai-ml-engineer.jpg" alt="Ali Shan — AI & ML Engineer" fill
+        className="av-img" priority sizes="(max-width: 992px) 240px, 380px" style={{ objectFit:'cover', borderRadius:'50%' }} />
+      <div className="av-badges">
+        <div className="av-badge av-b1">AI</div>
+        <div className="av-badge av-b2">ML</div>
+        <div className="av-badge av-b3">CV</div>
+        <div className="av-badge av-b4">LLM</div>
+      </div>
+    </div>
+  );
+
   return (
     <section className="hero" id="home">
       <div className="hero-bg">
@@ -73,6 +89,7 @@ export default function Hero() {
       <div className="hero-inner container">
         <div className="hero-content">
           <div className="hero-badge"><span className="badge-dot" />Open to opportunities</div>
+          <Avatar className="mobile-avatar" />
           <h1 className="hero-title">Hi, I&apos;m <span className="gradient-text">Ali Shan</span></h1>
           <div className="hero-typewriter">
             <span ref={twRef} id="tw-text" />
@@ -100,19 +117,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-avatar">
-          <div className="av-ring av-ring1" />
-          <div className="av-ring av-ring2" />
-          <div className="av-ring av-ring3" />
-          <Image src="/images/profile/ali-shan-ai-ml-engineer.jpg" alt="Ali Shan — AI & ML Engineer" fill
-            className="av-img" priority sizes="(max-width: 992px) 300px, 380px" style={{ objectFit:'cover', borderRadius:'50%' }} />
-          <div className="av-badges">
-            <div className="av-badge av-b1">AI</div>
-            <div className="av-badge av-b2">ML</div>
-            <div className="av-badge av-b3">CV</div>
-            <div className="av-badge av-b4">LLM</div>
-          </div>
-        </div>
+        <Avatar className="desktop-avatar" />
       </div>
     </section>
   );
