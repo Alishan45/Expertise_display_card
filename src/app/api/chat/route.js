@@ -21,7 +21,7 @@ export async function POST(request) {
     if (!message) return NextResponse.json({ ok: false, error: 'No message provided.' }, { status: 400 });
 
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: process.env.GEMINI_MODEL || 'gemini-1.5-flash' });
+    const model = genAI.getGenerativeModel({ model: process.env.GEMINI_MODEL || 'gemini-2.5-flash' });
 
     const chat = model.startChat({
       history: [
