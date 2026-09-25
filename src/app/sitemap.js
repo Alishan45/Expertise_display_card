@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://alishan.vercel.app';
+  const baseUrl = 'https://alishanai.vercel.app';
   
   return [
     {

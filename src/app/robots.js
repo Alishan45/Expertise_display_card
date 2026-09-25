@@ -5,6 +5,6 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://alishanportfolio.vercel.app/sitemap.xml',
+    sitemap: 'https://alishanai.vercel.app/sitemap.xml',
   };
 }

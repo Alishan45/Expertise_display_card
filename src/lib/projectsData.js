@@ -235,6 +235,6 @@ export const PROJECT_META = {
     langClass: 'js',
     tags: ['React', 'Next.js', 'CSS'],
     featured: true,
-    homepage: 'https://alishanportfolio.vercel.app/',
+    homepage: 'https://alishanai.vercel.app/',
   },
 };

@@ -16,7 +16,7 @@ export default function About() {
                 ['🐙 GitHub','https://github.com/Alishan45'],
                 ['💼 LinkedIn','https://linkedin.com/in/ali-shan-542246235'],
                 ['✉ Email','mailto:alishan.cs01@gmail.com'],
-                ['🌐 Portfolio','https://alishanportfolio.vercel.app'],
+                ['🌐 Portfolio','https://alishanai.vercel.app'],
               ].map(([label, href]) => (
                 <a key={label} href={href} target={href.startsWith('http')?'_blank':undefined}
                   rel="noopener noreferrer" className="social-link">{label}</a>

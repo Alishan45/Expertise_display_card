@@ -8,14 +8,15 @@ const inter = Inter({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://alishanportfolio.vercel.app'),
+  metadataBase: new URL('https://alishanai.vercel.app'),
   title: {
     default: 'Ali Shan — AI & Machine Learning Engineer | Data Scientist',
     template: '%s | Ali Shan Portfolio'
   },
   description: 'Results-driven AI Engineer and Data Scientist with 2+ years building end-to-end ML systems in Computer Vision, NLP, Generative AI, and Data Analytics.',
   keywords: [
-    'Ali Shan', 'Ali Shan Portfolio', 'Ali Shan AI', 'Ali Shan Machine Learning', 
+    'Ali', 'Shan', 'Ali Shan', 'Ali Shan Portfolio', 'Ali Shan AI', 'Ali Shan Machine Learning', 
+    'Ali Shan Developer', 'Ali Shan Software Engineer', 'Ali Shan Data Scientist', 'Ali Shan Portfolio Website',
     'AI Engineer Pakistan', 'Machine Learning Engineer', 'Data Scientist', 'Computer Vision Specialist',
     'Deep Learning', 'NLP Engineer', 'Generative AI', 'LLM Developer', 'RAG Pipeline Builder',
     'YOLO Object Detection', 'Python Developer', 'PyTorch Expert', 'TensorFlow', 'Data Analytics',
@@ -25,7 +26,7 @@ export const metadata = {
     'AI Solutions Developer', 'Artificial Intelligence Engineer', 'Data Engineering', 'Model Fine-tuning',
     'AI Automation', 'Data Visualization', 'Scikit-Learn', 'OpenCV'
   ],
-  authors: [{ name: 'Ali Shan', url: 'https://alishanportfolio.vercel.app' }],
+  authors: [{ name: 'Ali Shan', url: 'https://alishanai.vercel.app' }],
   creator: 'Ali Shan',
   publisher: 'Ali Shan',
   formatDetection: { email: false, address: false, telephone: false },
@@ -33,7 +34,7 @@ export const metadata = {
   openGraph: {
     title: 'Ali Shan — AI & Machine Learning Engineer',
     description: 'Results-driven AI Engineer and Data Scientist building end-to-end ML systems in Computer Vision, NLP, and Generative AI.',
-    url: 'https://alishanportfolio.vercel.app',
+    url: 'https://alishanai.vercel.app',
     siteName: 'Ali Shan Portfolio',
     images: [{ url: '/icon.jpg', width: 800, height: 800, alt: 'Ali Shan AI Portfolio' }],
     locale: 'en_US',
@@ -61,12 +62,33 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Ali Shan',
+    url: 'https://alishanai.vercel.app',
+    jobTitle: 'AI & Machine Learning Engineer | Data Scientist',
+    description: 'Results-driven AI Engineer and Data Scientist with 2+ years building end-to-end ML systems in Computer Vision, NLP, Generative AI, and Data Analytics.',
+    image: 'https://alishanai.vercel.app/icon.jpg',
+    sameAs: [
+      'https://alishanai.vercel.app'
+    ],
+    knowsAbout: [
+      'Machine Learning', 'Artificial Intelligence', 'Computer Vision', 'Natural Language Processing',
+      'Generative AI', 'Deep Learning', 'Data Science', 'Python', 'React', 'Next.js'
+    ]
+  };
+
   return (
     <html lang="en" className={inter.variable}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>{children}</body>
     </html>

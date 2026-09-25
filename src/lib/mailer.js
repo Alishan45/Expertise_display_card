@@ -52,7 +52,7 @@ export async function sendContactEmail({ name, email, subject, message }) {
             <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 16px; color: #374151; font-size: 14px; line-height: 1.6; white-space: pre-wrap; word-break: break-word;">${message}</div>
           </div>
           <div style="background-color: #f3f4f6; padding: 16px; text-align: center; color: #6b7280; font-size: 12px;">
-            Received from <a href="https://alishanportfolio.vercel.app" style="color: #4f46e5; text-decoration: none;">Your Portfolio Website</a>
+            Received from <a href="https://alishanai.vercel.app" style="color: #4f46e5; text-decoration: none;">Your Portfolio Website</a>
           </div>
         </div>
       </body>
@@ -91,7 +91,7 @@ export async function sendContactEmail({ name, email, subject, message }) {
             <div>
               <a href="https://linkedin.com/in/ali-shan-542246235" style="display: inline-block; padding: 8px 16px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 500; margin: 4px;">LinkedIn</a>
               <a href="https://github.com/Alishan45" style="display: inline-block; padding: 8px 16px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 500; margin: 4px;">GitHub</a>
-              <a href="https://alishanportfolio.vercel.app" style="display: inline-block; padding: 8px 16px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 500; margin: 4px;">Portfolio</a>
+              <a href="https://alishanai.vercel.app" style="display: inline-block; padding: 8px 16px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 500; margin: 4px;">Portfolio</a>
             </div>
           </div>
         </div>
