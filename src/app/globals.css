@@ -136,8 +136,8 @@ h1,h2,h3,h4,h5,h6{line-height:1.2;font-weight:700}
   .hero{padding:100px 16px 60px}
   .hero-title{font-size:2.6rem}
   .hero-avatar{width:240px;height:240px;margin-top:20px}
-  .av-badges,.av-ring{display:none} /* Clean static avatar on mobile */
-  .av-img{box-shadow:0 15px 35px rgba(0,0,0,0.4);border-color:rgba(255,255,255,0.1)}
+  .av-img{box-shadow:0 15px 35px var(--shadow);border-color:var(--accent)}
+  .av-badge{font-size:0.7rem;padding:4px 8px}
 }
 @media(max-width:480px){
   .hero-title{font-size:2.2rem}
