@@ -74,7 +74,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-form-wrap premium-form">
-            <h3 style={{ marginBottom: '24px', fontSize: '1.6rem', color: '#fff', fontWeight: 600 }}>Send a Message</h3>
+            <h3 style={{ marginBottom: '24px', fontSize: '1.6rem', color: 'var(--text)', fontWeight: 600 }}>Send a Message</h3>
             <form onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
