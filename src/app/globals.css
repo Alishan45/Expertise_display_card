@@ -84,7 +84,7 @@ h1,h2,h3,h4,h5,h6{line-height:1.2;font-weight:700}
   .nav-links.open li:last-child{border-bottom:none}
   .nav-links.open a{display:block;font-size:1.1rem;font-weight:600;text-transform:capitalize;color:var(--text);padding:18px 24px;background:transparent;transition:background 0.2s;text-align:left}
   .nav-links.open a.active,.nav-links.open a:hover{color:var(--accent-light);background:rgba(255,255,255,0.03)}
-  .nav-actions .btn-outline{display:none}
+  .nav-actions .cv-btn{padding: 6px 12px; font-size: 0.8rem;}
   .nav-actions{z-index:1002;position:relative;gap:8px}
 }
 @keyframes slideDown{from{opacity:0;transform:scaleY(0.95)}to{opacity:1;transform:scaleY(1)}}

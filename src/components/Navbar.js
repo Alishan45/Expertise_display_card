@@ -57,7 +57,7 @@ export default function Navbar() {
           <button className="theme-btn" onClick={toggleTheme} aria-label="Toggle theme">
             {theme === 'dark' ? '🌙' : '☀️'}
           </button>
-          <a href="/Ali_Shan_CV.pdf" className="btn btn-outline" download>Download CV</a>
+          <a href="/Ali_Shan_CV.pdf" className="btn btn-outline cv-btn" download>Download CV</a>
         </div>
 
         <button className={`hamburger${menuOpen ? ' active' : ''}`} aria-label="Menu" onClick={() => setMenuOpen(o => !o)}>
