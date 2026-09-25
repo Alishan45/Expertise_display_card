@@ -22,7 +22,7 @@ export async function POST(request) {
 
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
     const model = genAI.getGenerativeModel({ 
-      model: process.env.GEMINI_MODEL || 'gemini-3.8-flash',
+      model: process.env.GEMINI_MODEL || 'gemini-3.5-flash',
       systemInstruction: SYSTEM_CONTEXT
     });
 
@@ -44,7 +44,7 @@ export async function POST(request) {
   } catch (err) {
     console.error('[api/chat] Gemini error:', err);
     return NextResponse.json(
-      { ok: false, reply: "I'm having trouble connecting right now. Please email Ali directly at alishan.cs01@gmail.com" },
+      { ok: false, reply: `API Error: ${err.message}` },
       { status: 200 }
     );
   }
