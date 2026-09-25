@@ -21,21 +21,32 @@ export async function sendContactEmail({ name, email, subject, message }) {
     from: `"Portfolio Contact" <${process.env.SMTP_EMAIL}>`,
     to,
     replyTo: email,
-    subject: `[Portfolio] ${subject}`,
+    subject: `Portfolio Message from ${name}: ${subject}`,
     html: `
-      <div style="font-family:Inter,sans-serif;max-width:600px;margin:0 auto;background:#0a0a0c;color:#f0f0f0;border-radius:12px;overflow:hidden;">
-        <div style="background:linear-gradient(135deg,#6366f1,#a855f7);padding:28px 32px;">
-          <h2 style="margin:0;color:#fff;font-size:1.4rem;">New Contact Form Submission</h2>
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+        <div style="background-color: #4f46e5; padding: 30px 40px; text-align: center;">
+          <h2 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: 600;">New Contact Submission</h2>
         </div>
-        <div style="padding:32px;">
-          <p><strong>From:</strong> ${name}</p>
-          <p><strong>Email:</strong> <a href="mailto:${email}" style="color:#818cf8;">${email}</a></p>
-          <p><strong>Subject:</strong> ${subject}</p>
-          <hr style="border:1px solid #2a2a35;margin:20px 0;" />
-          <p style="white-space:pre-wrap;line-height:1.7;">${message}</p>
+        <div style="padding: 40px;">
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 30px;">
+            <tr>
+              <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280; font-size: 14px; width: 100px;">Name:</td>
+              <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #111827; font-size: 16px; font-weight: 500;">${name}</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280; font-size: 14px;">Email:</td>
+              <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #4f46e5; font-size: 16px; font-weight: 500;"><a href="mailto:${email}" style="color: #4f46e5; text-decoration: none;">${email}</a></td>
+            </tr>
+            <tr>
+              <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #6b7280; font-size: 14px;">Subject:</td>
+              <td style="padding: 10px 0; border-bottom: 1px solid #f3f4f6; color: #111827; font-size: 16px; font-weight: 500;">${subject}</td>
+            </tr>
+          </table>
+          <h3 style="color: #374151; font-size: 16px; margin-bottom: 15px; font-weight: 600;">Message:</h3>
+          <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 20px; color: #374151; font-size: 15px; line-height: 1.6; white-space: pre-wrap;">${message}</div>
         </div>
-        <div style="background:#15151a;padding:16px 32px;font-size:0.8rem;color:#6b7280;">
-          Sent via alishanportfolio.vercel.app
+        <div style="background-color: #f3f4f6; padding: 20px; text-align: center; color: #6b7280; font-size: 13px;">
+          Received from <a href="https://alishanportfolio.vercel.app" style="color: #4f46e5; text-decoration: none;">Your Portfolio Website</a>
         </div>
       </div>
     `,
@@ -45,22 +56,28 @@ export async function sendContactEmail({ name, email, subject, message }) {
   await transporter.sendMail({
     from: `"Ali Shan" <${process.env.SMTP_EMAIL}>`,
     to: email,
-    subject: `Re: ${subject} — Thanks for reaching out!`,
+    subject: `Re: ${subject}`,
     html: `
-      <div style="font-family:Inter,sans-serif;max-width:600px;margin:0 auto;background:#0a0a0c;color:#f0f0f0;border-radius:12px;overflow:hidden;">
-        <div style="background:linear-gradient(135deg,#6366f1,#a855f7);padding:28px 32px;">
-          <h2 style="margin:0;color:#fff;">Thanks for reaching out, ${name}!</h2>
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+        <div style="background-color: #4f46e5; padding: 40px; text-align: center;">
+          <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700;">Message Received!</h1>
+          <p style="margin: 10px 0 0; color: #e0e7ff; font-size: 16px;">Thank you for getting in touch, ${name}.</p>
         </div>
-        <div style="padding:32px;">
-          <p>Hi ${name},</p>
-          <p>I've received your message and will get back to you as soon as possible, usually within 24–48 hours.</p>
-          <p style="margin-top:20px;"><strong>Your message:</strong></p>
-          <blockquote style="border-left:3px solid #6366f1;padding-left:16px;color:#9ea3b0;margin:12px 0;">${message}</blockquote>
-          <p style="margin-top:24px;">Best regards,<br/><strong>Ali Shan</strong><br/>AI & ML Engineer · Data Scientist</p>
-          <div style="margin-top:24px;display:flex;gap:12px;">
-            <a href="https://github.com/Alishan45" style="color:#818cf8;">GitHub</a> ·
-            <a href="https://linkedin.com/in/ali-shan-542246235" style="color:#818cf8;">LinkedIn</a> ·
-            <a href="https://alishanportfolio.vercel.app" style="color:#818cf8;">Portfolio</a>
+        <div style="padding: 40px;">
+          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-top: 0;">Hi ${name},</p>
+          <p style="color: #374151; font-size: 16px; line-height: 1.6;">Thank you for contacting me regarding <strong>"${subject}"</strong>. I have successfully received your message and will review it shortly. You can expect to hear back from me within 24 to 48 hours.</p>
+          <div style="margin: 30px 0; border-left: 4px solid #4f46e5; padding-left: 20px;">
+            <p style="color: #6b7280; font-size: 14px; margin: 0 0 10px; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600;">Your Message:</p>
+            <p style="color: #4b5563; font-size: 15px; line-height: 1.6; margin: 0; font-style: italic;">"${message}"</p>
+          </div>
+          <p style="color: #374151; font-size: 16px; line-height: 1.6;">Best regards,<br><strong style="color: #111827; font-size: 18px; display: inline-block; margin-top: 8px;">Ali Shan</strong><br><span style="color: #6b7280; font-size: 14px;">AI & ML Engineer · Data Scientist</span></p>
+        </div>
+        <div style="background-color: #f9fafb; border-top: 1px solid #e5e7eb; padding: 30px 40px; text-align: center;">
+          <p style="margin: 0 0 15px; color: #6b7280; font-size: 14px;">Connect with me:</p>
+          <div>
+            <a href="https://linkedin.com/in/ali-shan-542246235" style="display: inline-block; padding: 10px 20px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 500; margin: 0 5px;">LinkedIn</a>
+            <a href="https://github.com/Alishan45" style="display: inline-block; padding: 10px 20px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 500; margin: 0 5px;">GitHub</a>
+            <a href="https://alishanportfolio.vercel.app" style="display: inline-block; padding: 10px 20px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 500; margin: 0 5px;">Portfolio</a>
           </div>
         </div>
       </div>
