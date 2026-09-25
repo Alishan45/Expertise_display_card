@@ -33,8 +33,8 @@ export default async function Home() {
         <Skills />
         <Experience />
         <Projects repos={repos} />
-        <Testimonials />
         <GitHubSection repos={repos} langStats={langStats} />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

@@ -52,30 +52,43 @@ const REVIEWS = [
 ];
 
 export default function Testimonials() {
+  // Duplicate reviews to create a seamless infinite scrolling marquee
+  const duplicatedReviews = [...REVIEWS, ...REVIEWS];
+
   return (
-    <section className="section section-alt" id="testimonials">
+    <section className="section" id="testimonials" style={{ overflow: 'hidden' }}>
       <div className="container">
         <div className="section-header">
           <span className="section-tag">Global Impact</span>
           <h2 className="section-title">Client Feedback</h2>
           <p className="section-subtitle">What professionals from around the world are saying about my work.</p>
         </div>
+      </div>
         
-        <div className="testimonials-grid">
-          {REVIEWS.map(review => (
-            <div key={review.id} className="review-card reveal">
-              <div className="review-stars">
-                {'★'.repeat(review.rating)}
-              </div>
-              <p className="review-text">"{review.text}"</p>
-              <div className="review-footer">
-                <div className="review-avatar">
-                  {review.name.charAt(0)}
+      <div className="testimonials-marquee-container">
+        <div className="testimonials-marquee">
+          {duplicatedReviews.map((review, i) => (
+            <div key={`${review.id}-${i}`} className="review-card-premium">
+              <div className="review-card-glow"></div>
+              <div className="review-content-inner">
+                <div className="review-header">
+                  <div className="review-avatar">
+                    {review.name.charAt(0)}
+                  </div>
+                  <div className="review-author">
+                    <h4>{review.name}</h4>
+                    <p>{review.role}</p>
+                  </div>
                 </div>
-                <div className="review-author">
-                  <h4>{review.name}</h4>
-                  <p>{review.role}</p>
-                  <span className="review-location">{review.location}</span>
+                <div className="review-stars">
+                  {'★'.repeat(review.rating)}
+                </div>
+                <p className="review-text">"{review.text}"</p>
+                <div className="review-footer">
+                  <span className="review-location">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '6px', opacity: 0.8}}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    {review.location}
+                  </span>
                 </div>
               </div>
             </div>
