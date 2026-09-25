@@ -5,6 +5,7 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
+import Testimonials from '@/components/Testimonials';
 import GitHubSection from '@/components/GitHubSection';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -32,6 +33,7 @@ export default async function Home() {
         <Skills />
         <Experience />
         <Projects repos={repos} />
+        <Testimonials />
         <GitHubSection repos={repos} langStats={langStats} />
         <Contact />
       </main>
