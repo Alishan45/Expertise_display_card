@@ -10,11 +10,11 @@ export default function AIChatBot() {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  const endRef = useRef(null);
+  const chatMessagesRef = useRef(null);
 
   useEffect(() => {
-    if (isOpen) {
-      endRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isOpen && chatMessagesRef.current) {
+      chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
     }
   }, [messages, isOpen]);
 
@@ -51,14 +51,13 @@ export default function AIChatBot() {
             <h3>Ask Ali&apos;s AI Assistant</h3>
             <button className="chat-close" onClick={() => setIsOpen(false)}>×</button>
           </div>
-          <div className="chat-messages">
+          <div className="chat-messages" ref={chatMessagesRef}>
             {messages.map((m, i) => (
               <div key={i} className={`chat-msg ${m.role === 'user' ? 'user' : 'bot'}`}>
                 <ReactMarkdown>{m.text}</ReactMarkdown>
               </div>
             ))}
             {loading && <div className="chat-msg bot">Thinking…</div>}
-            <div ref={endRef} />
           </div>
           <div className="chat-input-row">
             <input className="chat-input" value={input} onChange={e => setInput(e.target.value)}
