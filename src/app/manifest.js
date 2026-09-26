@@ -9,12 +9,12 @@ export default function manifest() {
     theme_color: '#6366f1',
     icons: [
       {
-        src: '/icon.jpg',
+        src: '/ali-shan-icon.jpg',
         sizes: '192x192',
         type: 'image/jpeg',
       },
       {
-        src: '/icon.jpg',
+        src: '/ali-shan-icon.jpg',
         sizes: '512x512',
         type: 'image/jpeg',
       },

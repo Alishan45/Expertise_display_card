@@ -36,7 +36,7 @@ export const metadata = {
     description: 'Results-driven AI Engineer and Data Scientist building end-to-end ML systems in Computer Vision, NLP, and Generative AI.',
     url: 'https://alishanai.vercel.app',
     siteName: 'Ali Shan Portfolio',
-    images: [{ url: '/icon.jpg', width: 800, height: 800, alt: 'Ali Shan AI Portfolio' }],
+    images: [{ url: '/ali-shan-icon.jpg', width: 800, height: 800, alt: 'Ali Shan AI Portfolio' }],
     locale: 'en_US',
     type: 'website',
   },
@@ -44,7 +44,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Ali Shan — AI & ML Engineer',
     description: 'Results-driven AI Engineer and Data Scientist building end-to-end ML systems.',
-    images: ['/icon.jpg'],
+    images: ['/ali-shan-icon.jpg'],
   },
   robots: {
     index: true,
@@ -52,9 +52,9 @@ export const metadata = {
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   icons: {
-    icon: '/icon.jpg',
-    shortcut: '/icon.jpg',
-    apple: '/icon.jpg',
+    icon: '/ali-shan-icon.jpg',
+    shortcut: '/ali-shan-icon.jpg',
+    apple: '/ali-shan-icon.jpg',
   },
   verification: {
     google: 'GoVY514zhiJbKBcxB-NMo2-mgX-oQYUOYdIzoPCRTIw',
@@ -69,9 +69,11 @@ export default function RootLayout({ children }) {
     url: 'https://alishanai.vercel.app',
     jobTitle: 'AI & Machine Learning Engineer | Data Scientist',
     description: 'Results-driven AI Engineer and Data Scientist with 2+ years building end-to-end ML systems in Computer Vision, NLP, Generative AI, and Data Analytics.',
-    image: 'https://alishanai.vercel.app/icon.jpg',
+    image: 'https://alishanai.vercel.app/images/profile/ali-shan.jpg',
     sameAs: [
-      'https://alishanai.vercel.app'
+      'https://alishanai.vercel.app',
+      'https://github.com/Alishan45',
+      'https://linkedin.com/in/ali-shan-542246235'
     ],
     knowsAbout: [
       'Machine Learning', 'Artificial Intelligence', 'Computer Vision', 'Natural Language Processing',

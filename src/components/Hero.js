@@ -66,7 +66,7 @@ export default function Hero() {
       <div className="av-ring av-ring1" />
       <div className="av-ring av-ring2" />
       <div className="av-ring av-ring3" />
-      <Image src="/images/profile/ali-shan-ai-ml-engineer.jpg" alt="Ali Shan — AI & ML Engineer" fill
+      <Image src="/images/profile/ali-shan.jpg" alt="Ali Shan — AI & ML Engineer" fill
         className="av-img" priority sizes="(max-width: 992px) 240px, 380px" style={{ objectFit:'cover', borderRadius:'50%' }} />
       <div className="av-badges">
         <div className="av-badge av-b1">AI</div>

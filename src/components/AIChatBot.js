@@ -74,7 +74,7 @@ export default function AIChatBot() {
           </svg>
         ) : (
           <>
-            <img src="/chat-icon.jpg" alt="Ali's AI Assistant" style={{ width: '32px', height: '32px', borderRadius: '50%', objectFit: 'cover' }} />
+            <img src="/ali-shan-chat-icon.jpg" alt="Ali's AI Assistant" style={{ width: '32px', height: '32px', borderRadius: '50%', objectFit: 'cover' }} />
             <span>AI Chat</span>
           </>
         )}

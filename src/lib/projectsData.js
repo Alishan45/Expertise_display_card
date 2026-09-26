@@ -28,7 +28,7 @@ export const PROJECT_META = {
   Medbot: {
     title: 'MedBot — AI Medical Chatbot',
     description: 'AI-driven medical chatbot providing real-time health information and symptom-based guidance using the Gemini API. Flask backend with responsive Bootstrap frontend.',
-    image: '/images/projects/img_medbot.jpg',
+    image: '/images/projects/ali-shan-ai-medical-chatbot-medbot.jpg',
     categories: ['medical', 'nlp'],
     badge: 'Medical AI',
     lang: 'Python',
@@ -39,7 +39,7 @@ export const PROJECT_META = {
   'HeartVision-AI': {
     title: 'HeartVision AI — Cardiac Risk Predictor',
     description: 'AI-powered Streamlit app predicting heart disease risk using a trained KNN model. Enter health metrics and get instant AI-powered risk insights.',
-    image: '/images/projects/img_heartvision.jpg',
+    image: '/images/projects/ali-shan-heart-vision-ai-cardiac-risk-predictor.jpg',
     categories: ['medical'],
     badge: 'Medical AI',
     lang: 'Jupyter',
@@ -50,7 +50,7 @@ export const PROJECT_META = {
   'conceal-weaponDetection': {
     title: 'Concealed Weapon Detection (Thermal)',
     description: 'Fine-tuned YOLOv11 on a custom thermal-pistol dataset. Reduced false positives by 18% vs YOLOv5s baseline — designed for soldier-worn real-time CCTV pipelines.',
-    image: '/images/projects/img_weapon.jpg',
+    image: '/images/projects/ali-shan-thermal-concealed-weapon-detection.jpg',
     categories: ['cv'],
     badge: 'Computer Vision',
     lang: 'Jupyter',
@@ -61,7 +61,7 @@ export const PROJECT_META = {
   'skinCancerClassifcation': {
     title: 'Skin Cancer Detection & Classification',
     description: 'YOLO-based deep learning model detecting and classifying skin cancer lesions from dermatoscopic images with high accuracy for clinical decision support.',
-    image: '/images/projects/img_skin.jpg',
+    image: '/images/projects/ali-shan-skin-cancer-detection-classification-ai.jpg',
     categories: ['medical', 'cv'],
     badge: 'Medical AI',
     lang: 'Jupyter',
@@ -72,7 +72,7 @@ export const PROJECT_META = {
   'GPT-Vision-Docs-LLM': {
     title: 'GPT Vision Docs — Multi-Modal LLM Pipeline',
     description: 'Multi-modal AI pipeline extracting content from PDFs, Word, and PPT via OCR/NLP, then feeding into locally running LLMs (LLaMA, Mistral, TinyLLaMA).',
-    image: '/images/projects/img_gpt.jpg',
+    image: '/images/projects/ali-shan-gpt-vision-docs-multi-modal-llm.jpg',
     categories: ['nlp'],
     badge: 'LLM Pipeline',
     lang: 'Jupyter',
@@ -83,7 +83,7 @@ export const PROJECT_META = {
   'medbot_vectorizedDatasetWithLLMS': {
     title: 'MedGPT — RAG Medical Assistant',
     description: 'Retrieval-augmented medical assistant grounding fine-tuned LLMs on BM25-retrieved medical books stored in a vector database for semantic search and context-aware responses.',
-    image: '/images/projects/img_medgpt.jpg',
+    image: '/images/projects/ali-shan-medgpt-rag-medical-assistant.jpg',
     categories: ['medical', 'nlp'],
     badge: 'Medical AI · RAG',
     lang: 'Jupyter',
@@ -94,7 +94,7 @@ export const PROJECT_META = {
   'dental-implant-detection-': {
     title: 'Dental Implant Detection (X-Ray)',
     description: 'Fine-tuned YOLOv11m for precise dental implant detection in radiographic images. Identifies implant types, positions, and anomalies to aid dental diagnostics.',
-    image: '/images/projects/img_dental.jpg',
+    image: '/images/projects/ali-shan-dental-implant-detection-xray-ai.jpg',
     categories: ['medical', 'cv'],
     badge: 'Medical AI',
     lang: 'Jupyter',
@@ -105,7 +105,7 @@ export const PROJECT_META = {
   'eye-gender-classifier': {
     title: 'Eye Gender Classifier',
     description: 'Privacy-focused offline app classifying gender from eye images or video using fine-tuned ResNet-18. Real-time analysis with PyTorch and Streamlit.',
-    image: '/images/projects/img_eye.jpg',
+    image: '/images/projects/ali-shan-eye-gender-classifier-deep-learning.jpg',
     categories: ['cv'],
     badge: 'Deep Learning',
     lang: 'Jupyter',
@@ -116,7 +116,7 @@ export const PROJECT_META = {
   'futuristic-emotion-detector': {
     title: 'Futuristic Emotion Detector',
     description: 'AI-powered emotion detection with TF-IDF and Logistic Regression. Predicts emotions with confidence scores, emoji feedback, and interactive animations.',
-    image: '/images/projects/img_emotion.jpg',
+    image: '/images/projects/ali-shan-ai-futuristic-emotion-detector.jpg',
     categories: ['nlp'],
     badge: 'NLP',
     lang: 'Python',
@@ -127,7 +127,7 @@ export const PROJECT_META = {
   'plant_desease_classifier': {
     title: 'Plant Disease Classifier',
     description: 'Deep learning CNN classifying plant diseases from leaf images. Identifies pathologies for precision agriculture and early disease intervention.',
-    image: '/images/projects/img_plant.jpg',
+    image: '/images/projects/ali-shan-plant-disease-classifier-cnn.jpg',
     categories: ['cv'],
     badge: 'AgriTech AI',
     lang: 'Python',
@@ -138,7 +138,7 @@ export const PROJECT_META = {
   'satilliteHouseDetection': {
     title: 'Satellite House Detection',
     description: 'Annotated Google satellite imagery on Roboflow, then fine-tuned YOLOv11 on Google Colab for automated house detection from aerial imagery.',
-    image: '/images/projects/img_satellite.jpg',
+    image: '/images/projects/ali-shan-satellite-house-detection-yolo.jpg',
     categories: ['cv'],
     badge: 'Geospatial AI',
     lang: 'Jupyter',
@@ -149,7 +149,7 @@ export const PROJECT_META = {
   'AI-Content-to-PDF-Enhancer': {
     title: 'AI Content to PDF Enhancer',
     description: 'React-based live application converting AI-generated content into customizable, share-ready PDF documents. Built during AISoftDevs internship.',
-    image: '/images/projects/img_aipdf.jpg',
+    image: '/images/projects/ali-shan-ai-content-to-pdf-enhancer.jpg',
     categories: ['fullstack'],
     badge: 'Full-Stack',
     lang: 'TypeScript',
@@ -161,7 +161,7 @@ export const PROJECT_META = {
   'yoloModelsInference': {
     title: 'YOLO Object Tracking & Pose Estimation',
     description: 'Comprehensive YOLO inference toolkit supporting Detection, Segmentation, and Pose Estimation for real-time object tracking with ByteTrack.',
-    image: '/images/projects/img_yolo_pose.jpg',
+    image: '/images/projects/ali-shan-yolo-object-tracking-pose-estimation.jpg',
     categories: ['cv'],
     badge: 'Computer Vision',
     lang: 'Jupyter',
@@ -172,7 +172,7 @@ export const PROJECT_META = {
   'sk_professors': {
     title: 'AI Professor Outreach Agent (GKS)',
     description: 'Automated AI-powered email agent for GKS South Korean professor scholarship outreach with intelligent personalized email generation.',
-    image: '/images/projects/img_prof_agent.jpg',
+    image: '/images/projects/ali-shan-ai-professor-outreach-agent.jpg',
     categories: ['automation', 'nlp'],
     badge: 'AI Automation',
     lang: 'Python',
@@ -183,7 +183,7 @@ export const PROJECT_META = {
   'RAG-Full-parameterized-fine-tuning': {
     title: 'RAG Full-Parameterized Fine-Tuning',
     description: 'Full-parameter LLM fine-tuning pipeline designed for RAG scenarios, enabling domain-specific knowledge injection into large language models.',
-    image: '/images/projects/img_gpt.jpg',
+    image: '/images/projects/ali-shan-gpt-vision-docs-multi-modal-llm.jpg',
     categories: ['nlp'],
     badge: 'LLM / RAG',
     lang: 'Jupyter',
@@ -194,7 +194,7 @@ export const PROJECT_META = {
   'Multi_Camera_Surveillance_Person_Reid_Tracking': {
     title: 'Multi-Camera Surveillance & Person Re-ID',
     description: 'End-to-end multi-camera surveillance system with Person Re-Identification (ReID) and cross-camera tracking for security applications.',
-    image: '/images/projects/img_surveillance.jpg',
+    image: '/images/projects/ali-shan-multi-camera-surveillance-person-reid.jpg',
     categories: ['cv'],
     badge: 'Security CV',
     lang: 'Python',
@@ -205,7 +205,7 @@ export const PROJECT_META = {
   'DataScienceMastery': {
     title: 'Data Science Mastery',
     description: 'Comprehensive hands-on notebooks covering Pandas, NumPy, Matplotlib, statistical analysis, EDA, and feature engineering workflows.',
-    image: '/images/projects/img_datascience.jpg',
+    image: '/images/projects/ali-shan-data-science-mastery-portfolio.jpg',
     categories: ['data'],
     badge: 'Data Science',
     lang: 'Jupyter',
@@ -216,7 +216,7 @@ export const PROJECT_META = {
   'akasha-iqbal-portfolio': {
     title: 'Akasha Iqbal Portfolio',
     description: 'A modern, responsive portfolio website built with modern web technologies, showcasing projects and experience.',
-    image: '/images/projects/img_akasha.jpg',
+    image: '/images/projects/ali-shan-akasha-iqbal-portfolio-website.jpg',
     categories: ['fullstack'],
     badge: 'Portfolio',
     lang: 'JavaScript',
@@ -228,7 +228,7 @@ export const PROJECT_META = {
   'portfolio-website': {
     title: 'Ali Shan Portfolio',
     description: 'My personal portfolio website (this site) showcasing my AI/ML projects, skills, and experience.',
-    image: '/images/projects/img_portfolio.jpg',
+    image: '/images/projects/ali-shan-ai-ml-engineer-portfolio.jpg',
     categories: ['fullstack'],
     badge: 'Portfolio',
     lang: 'JavaScript',
