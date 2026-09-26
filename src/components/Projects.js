@@ -73,11 +73,6 @@ export default function Projects({ repos = [] }) {
                 <div className="proj-footer">
                   <span className="cat-badge">{proj.badge}</span>
                   <div className="proj-links">
-                    {proj.homepage && (
-                      <a href={proj.homepage} target="_blank" rel="noopener noreferrer" className="proj-link demo">
-                        Live →
-                      </a>
-                    )}
                     <a href={proj.url} target="_blank" rel="noopener noreferrer" className="proj-link">GitHub →</a>
                   </div>
                 </div>
