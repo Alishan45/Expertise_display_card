@@ -13,7 +13,7 @@ export default function Footer() {
               ['LinkedIn','https://linkedin.com/in/ali-shan-542246235'],
               ['Email','mailto:alishan.cs01@gmail.com'],
               ['Download CV','/Ali_Shan_CV.pdf'],
-              ['Portfolio','https://alishanai.vercel.app'],
+              ['Portfolio','https://alishanportfolio.vercel.app'],
             ].map(([label, href]) => (
               <a key={label} href={href} target={href.startsWith('http')?'_blank':undefined}
                 rel="noopener noreferrer"
