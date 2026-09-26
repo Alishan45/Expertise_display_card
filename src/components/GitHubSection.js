@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
-const FEATURED_NAMES = ['Medbot','HeartVision-AI','conceal-weaponDetection','skinCancerClassifcation','GPT-Vision-Docs-LLM','medbot_vectorizedDatasetWithLLMS','dental-implant-detection-','eye-gender-classifier','futuristic-emotion-detector','plant_desease_classifier','satilliteHouseDetection','AI-Content-to-PDF-Enhancer','yoloModelsInference','sk_professors','RAG-Full-parameterized-fine-tuning','Multi_Camera_Surveillance_Person_Reid_Tracking','DataScienceMastery'];
+const FEATURED_NAMES = ['Medbot', 'HeartVision-AI', 'conceal-weaponDetection', 'skinCancerClassifcation', 'GPT-Vision-Docs-LLM', 'medbot_vectorizedDatasetWithLLMS', 'dental-implant-detection-', 'eye-gender-classifier', 'futuristic-emotion-detector', 'plant_desease_classifier', 'satilliteHouseDetection', 'AI-Content-to-PDF-Enhancer', 'yoloModelsInference', 'sk_professors', 'RAG-Full-parameterized-fine-tuning', 'Multi_Camera_Surveillance_Person_Reid_Tracking', 'DataScienceMastery'];
 
 function langBadge(lang) {
   if (!lang) return 'rl-other';
@@ -25,7 +25,19 @@ export default function GitHubSection({ repos = [], langStats = [] }) {
     return () => observer.disconnect();
   }, [langStats]);
 
-  const moreRepos = repos.filter(r => !FEATURED_NAMES.includes(r.name) && !r.fork && !r.archived);
+  const repoOverrides = {
+    'akasha-iqbal-portfolio': { language: 'TypeScript', description: 'Professional portfolio website for Akasha Iqbal, English educator and literary researcher.', homepage: 'https://akashaiqbal.vercel.app/' },
+    'Al-PDF-Enhancer': { language: 'TypeScript', description: 'No description provided.', homepage: 'https://al-pdf-enhancer.vercel.app/' },
+    'Expertise_display_card': { language: 'JavaScript', description: 'AI & ML Engineer Portfolio Website', homepage: 'https://alishanportfolio.vercel.app/' },
+    'portfolio-vercel-react': { language: 'TypeScript', description: 'No description provided.', homepage: 'https://portfolio-vercel-react.vercel.app/' }
+  };
+
+  const moreRepos = repos.filter(r => !FEATURED_NAMES.includes(r.name) && !r.fork && !r.archived).map(r => {
+    if (repoOverrides[r.name]) {
+      return { ...r, ...repoOverrides[r.name] };
+    }
+    return r;
+  });
   const total = repos.length;
 
   // Compute tech bars from actual data or fallback
@@ -99,7 +111,7 @@ export default function GitHubSection({ repos = [], langStats = [] }) {
                 <div className="repo-card reveal" key={r.name}>
                   <div className="repo-card-top">
                     <span className="repo-name">{r.name}</span>
-                    {r.language && <span className={`repo-lang-badge ${langBadge(r.language)}`}>{r.language.replace(' Notebook','')}</span>}
+                    {r.language && <span className={`repo-lang-badge ${langBadge(r.language)}`}>{r.language.replace(' Notebook', '')}</span>}
                   </div>
                   <p className="repo-desc">{r.description || 'No description provided.'}</p>
                   <div className="repo-card-footer">
