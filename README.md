@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Live Links
+
+- **Expertise Display Card (This Repository)**: [https://alishanai.vercel.app](https://alishanai.vercel.app)
+- **Akasha Iqbal Live Portfolio**: [https://akashaiqbal.vercel.app/](https://akashaiqbal.vercel.app/)
+
 ## Getting Started
 
 First, run the development server:
