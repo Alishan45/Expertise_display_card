@@ -91,7 +91,7 @@ export async function sendContactEmail({ name, email, subject, message }) {
             <div>
               <a href="https://linkedin.com/in/ali-shan-542246235" style="display: inline-block; padding: 8px 16px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 500; margin: 4px;">LinkedIn</a>
               <a href="https://github.com/Alishan45" style="display: inline-block; padding: 8px 16px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 500; margin: 4px;">GitHub</a>
-              <a href="https://alishanportfolio.vercel.app" style="display: inline-block; padding: 8px 16px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 500; margin: 4px;">Portfolio</a>
+              <a href="https://alishanai.vercel.app" style="display: inline-block; padding: 8px 16px; background-color: #ffffff; border: 1px solid #d1d5db; color: #374151; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 500; margin: 4px;">Portfolio</a>
             </div>
           </div>
         </div>
